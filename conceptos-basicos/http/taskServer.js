@@ -6,6 +6,7 @@ const port = 3000;
 const tasks = [];
 let currentId = 1;
 
+// Helper / utils
 const getRequestBody = (req) => {
   return new Promise((resolve, reject) => {
     let body = '';
@@ -22,6 +23,11 @@ const getRequestBody = (req) => {
       reject(error);
     });
   });
+};
+
+// Controllers
+const getTasks = async (req, res) => {
+  return tasks;
 };
 
 const server = http.createServer((req, res) => {
