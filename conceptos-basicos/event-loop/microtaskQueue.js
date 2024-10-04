@@ -1,3 +1,4 @@
+//// Exemplo 4
 process.nextTick(() => console.log('nextTick 1'));
 
 process.nextTick(() => {
@@ -16,18 +17,25 @@ Promise.resolve().then(() => {
 
 Promise.resolve().then(() => console.log('Promise 3'));
 
-// Promise.resolve().then(() => {
-//   console.log('Promise 1');
-// });
+//// Exemplo 3
+Promise.resolve().then(() => {
+  console.log('Promise 1');
+});
 
-// process.nextTick(() => {
-//   console.log('nextTick 1');
-// });
+process.nextTick(() => {
+  console.log('nextTick 1');
+});
 
-// console.log('console.log 1');
+//// Exemplo 2
+console.log('console.log 1');
 
-// process.nextTick(() => {
-//   console.log('this is process.nextTick 1');
-// });
+process.nextTick(() => {
+  console.log('this is process.nextTick 1');
+});
 
-// console.log('console.log 2');
+console.log('console.log 2');
+
+//// Exemplo 1
+console.log('console.log 1');
+console.log('console.log 2');
+console.log('console.log 3');

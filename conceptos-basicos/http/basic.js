@@ -7,19 +7,19 @@ const server = createServer((req, res) => {
   // req => todo lo que llega del cliente como headers, body, etc
   // res => todo lo que se le va a enviar al cliente
 
-  // BASIC
+  //// BASIC
   // res.statusCode = 200;
   // res.setHeader('Content-Type', 'text/plain');
   // res.end('Hello World!');
 
-  // REQUEST
+  //// REQUEST
   // const { url, headers } = req;
   // const host = headers?.host;
 
   // console.log({ url, headers, host });
   // res.end();
 
-  // RESPONSE
+  //// RESPONSE
   // const users = [
   //   { name: 'Joshua', age: 29 },
   //   { name: 'Nicolas', age: 32 },
@@ -29,7 +29,7 @@ const server = createServer((req, res) => {
   // // res.end(users);
   // res.end(JSON.stringify(users));
 
-  // READ REQ BODY -> NodeJS usa stream de datos para las lecturas
+  //// READ REQ BODY -> NodeJS usa stream de datos para las lecturas
 
   const bodyBuffer = [];
 
