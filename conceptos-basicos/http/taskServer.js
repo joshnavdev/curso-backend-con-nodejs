@@ -30,8 +30,12 @@ const getTasks = async (req, res) => {
   return tasks;
 };
 
-const server = http.createServer((req, res) => {
+const server = http.createServer(async (req, res) => {
   const { method, url } = req;
+
+  if (method === 'GET' && url === '/tasks') {
+    const tasks = await getTasks(req, res);
+  }
 });
 
 server.listen(port, () => {
